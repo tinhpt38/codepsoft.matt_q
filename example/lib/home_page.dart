@@ -9,10 +9,26 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends CrossBuild<HomePage,CounterModel> {
 
+  /*
+  * Function is going to call after builder function done.
+  * It used for Future function or normal function
+  * */
   @override
   void widgetsBindingAsyncCallback(BuildContext context) async{
-    // handle Future function
+
   }
+
+  /**
+   * Return page model
+   */
+  @override
+  CounterModel model() {
+    return new CounterModel();
+  }
+
+  /*
+  * Return page using builder
+  * */
 
   @override
   Function(BuildContext context, CounterModel model, Widget child) builder() {
@@ -45,8 +61,4 @@ class _HomePageState extends CrossBuild<HomePage,CounterModel> {
     );
   }
 
-  @override
-  CounterModel model() {
-    return new CounterModel();
-  }
 }

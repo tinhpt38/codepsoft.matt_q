@@ -1,4 +1,4 @@
-## [0.1.0] - 2020-10-15
+## [0.1.1] - 2020-10-15
 
 * Add delay function.
 * Change name to Matt Q.

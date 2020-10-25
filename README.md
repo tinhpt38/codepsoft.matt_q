@@ -1,4 +1,4 @@
-# cross_build
+# matt_q
 
 Package defined a new extends widget to extends on StatefulWidget.
 Using Provider
@@ -9,14 +9,14 @@ https://codepsoft.com/
 # Usage
 - An Example for Page:
 ```dart
-import 'package:cross_build/cross_build.dart';
+import 'package:matt_q/matt_q.dart';
 
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends CrossBuild<HomePage,CounterModel> {
+class _HomePageState extends MattQ<HomePage,CounterModel> {
 
   /*
   * Function is going to call after builder function done.
@@ -73,7 +73,7 @@ class _HomePageState extends CrossBuild<HomePage,CounterModel> {
 -An example of a child widget used parent's model:
 
 ```dart
-import 'package:cross_build/over_consumer.dart';
+import 'package:matt_q/over_consumer.dart';
 
 class ConsumWidget extends StatefulWidget {
   @override
@@ -88,14 +88,3 @@ class _ConsumWidgetState extends OverConsumer<ConsumWidget, Counter> {
   }
 }
 ```
-
-## Getting Started
-
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.

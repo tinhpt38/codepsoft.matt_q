@@ -17,13 +17,8 @@ abstract class MattQ<T extends StatefulWidget, E extends ChangeNotifier>
   Function(BuildContext context, E model, Widget child) builder();
   E model();
 
-  void delay(E model) {}
-
   @override
   Function(BuildContext context, E model, Widget child) withBuilder() {
-    Future.delayed(Duration.zero, () async {
-      delay(withModel());
-    });
     return builder();
   }
 

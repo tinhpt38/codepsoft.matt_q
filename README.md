@@ -42,7 +42,7 @@ class _HomePageState extends MattQ<HomePage,CounterModel> {
   Function(BuildContext context, CounterModel model, Widget child) builder() {
     return (context, model, child) => Scaffold(
       appBar: AppBar(
-        title: Text("Cross build package on Provider"),
+        title: Text("MATT Q"),
       ),
       body: Container(
         width: double.infinity,
@@ -52,7 +52,7 @@ class _HomePageState extends MattQ<HomePage,CounterModel> {
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text("Example for Cross build"),
+              child: Text("Example for matt_q"),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),

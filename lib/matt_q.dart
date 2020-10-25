@@ -1,9 +1,9 @@
-library cross_build;
+library matt_q;
 
-import 'package:cross_build/provider_model.dart';
+import 'package:matt_q/provider_model.dart';
 import 'package:flutter/material.dart';
 
-abstract class CrossBuild<T extends StatefulWidget, E extends ChangeNotifier>
+abstract class MattQ<T extends StatefulWidget, E extends ChangeNotifier>
     extends State<T> with ProviderModel<E> {
   @override
   void initState() {
@@ -17,8 +17,13 @@ abstract class CrossBuild<T extends StatefulWidget, E extends ChangeNotifier>
   Function(BuildContext context, E model, Widget child) builder();
   E model();
 
+  void delay(E model) {}
+
   @override
   Function(BuildContext context, E model, Widget child) withBuilder() {
+    Future.delayed(Duration.zero, () async {
+      delay(withModel());
+    });
     return builder();
   }
 

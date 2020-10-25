@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -17,7 +15,5 @@ abstract class OverConsumer<T extends StatefulWidget, E extends ChangeNotifier>
   Function(BuildContext context, E model, Widget child) builder();
 
   @override
-  Widget build(BuildContext context) {
-    return Consumer<E>(builder: builder());
-  }
+  Widget build(BuildContext context) => Consumer<E>(builder: builder());
 }

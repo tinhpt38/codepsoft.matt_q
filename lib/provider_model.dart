@@ -5,12 +5,10 @@ mixin ProviderModel<T extends ChangeNotifier> {
   Function(BuildContext context, T model, Widget child) withBuilder();
   T withModel();
 
-  Widget present(BuildContext context) {
-    return ChangeNotifierProvider<T>.value(
-      value: withModel(),
-      child: Consumer<T>(
-        builder: withBuilder(),
-      ),
-    );
-  }
+  Widget present(BuildContext context) => ChangeNotifierProvider<T>.value(
+        value: withModel(),
+        child: Consumer<T>(
+          builder: withBuilder(),
+        ),
+      );
 }

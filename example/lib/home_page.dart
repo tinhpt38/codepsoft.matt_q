@@ -13,14 +13,17 @@ class _HomePageState extends MattQ<HomePage, CounterModel> {
   * It used for Future function or normal function
   * */
   @override
-  void widgetsBindingAsyncCallback(BuildContext context) async {}
+  void widgetsBindingAsyncCallback(BuildContext context, CounterModel model) {
+    // TODO: implement widgetsBindingAsyncCallback
+    super.widgetsBindingAsyncCallback(context, model);
+  }
 
   /*
    * Return page model
    */
   @override
   CounterModel model() {
-    return new CounterModel();
+    return CounterModel();
   }
 
   /*
@@ -30,7 +33,7 @@ class _HomePageState extends MattQ<HomePage, CounterModel> {
   Function(BuildContext context, CounterModel model, Widget child) builder() {
     return (context, model, child) => Scaffold(
           appBar: AppBar(
-            title: Text("MATT Q"),
+            title: Text("MattQ"),
           ),
           body: Container(
             width: double.infinity,

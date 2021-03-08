@@ -1,18 +1,20 @@
 library matt_q;
 
-import 'package:matt_q/provider_model.dart';
 import 'package:flutter/material.dart';
+import 'package:matt_q/provider_model.dart';
 
 abstract class MattQ<T extends StatefulWidget, E extends ChangeNotifier>
     extends State<T> with ProviderModel<E> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance
-        .addPostFrameCallback((_) => widgetsBindingAsyncCallback(context));
+    WidgetsBinding.instance.addPostFrameCallback(
+        (_) => widgetsBindingAsyncCallback(context, _localModel));
   }
 
-  void widgetsBindingAsyncCallback(BuildContext context) {}
+  E _localModel;
+
+  void widgetsBindingAsyncCallback(BuildContext context, E model) {}
 
   Function(BuildContext context, E model, Widget child) builder();
   E model();
@@ -24,7 +26,8 @@ abstract class MattQ<T extends StatefulWidget, E extends ChangeNotifier>
 
   @override
   E withModel() {
-    return model();
+    _localModel = model();
+    return _localModel;
   }
 
   @override

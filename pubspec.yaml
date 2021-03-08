@@ -1,17 +1,17 @@
 name: matt_q
-description: For Provider
-version: 0.1.2
+description: A Provider's Structure simple 
+version: 0.2.0
 author: Phan Trung Tinh <tinhpt.38@gmail.com>
 homepage: https://github.com/tinhpt38/codepsoft.crossbuild.git
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
-  flutter: ">=1.17.0 <2.0.0"
+  flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  provider: ^4.3.2+2
+  provider: ^5.0.0
 
 
 dev_dependencies:
